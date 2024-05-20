@@ -17,7 +17,7 @@ export default function Header() {
             />
             <View>
                 <Text style={{color:Colors.WHITE}}>Welcome,</Text>
-                <Text style={{color:Colors.WHITE, fontSize:16}}>{user?.fullName}</Text>
+                <Text style={{color:Colors.WHITE, fontSize:16,fontFamily:'outfit-bold'}}>{user?.fullName}</Text>
             </View>
         </View>
         <FontAwesome name="bookmark-o" size={27} color={Colors.WHITE} />
