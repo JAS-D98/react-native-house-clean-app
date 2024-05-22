@@ -6,6 +6,7 @@ import * as SecureStore from "expo-secure-store";
 import { NavigationContainer } from '@react-navigation/native';
 import TabNavigation from './App/Navigations/TabNavigation';
 import { useFonts } from 'expo-font';
+import { PUBLISHABLE_KEY } from '@env';
 
 const tokenCache = {
   async getToken(key) {
@@ -30,7 +31,7 @@ export default function App() {
     'outfit-bold': require('./assets/fonts/Outfit-Bold.ttf'),
   });
   return ( 
-      <ClerkProvider tokenCache={tokenCache} publishableKey='pk_test_bmV1dHJhbC1maXJlZmx5LTk5LmNsZXJrLmFjY291bnRzLmRldiQ'>
+      <ClerkProvider tokenCache={tokenCache} publishableKey = {PUBLISHABLE_KEY}>
         <View style={styles.container}>
 
           {/* sign in component */}
